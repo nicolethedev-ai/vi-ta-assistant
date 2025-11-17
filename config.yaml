@@ -1,0 +1,69 @@
+cookie:
+  expiry_days: 30
+  key: jhdiuqeuo87ffegfougfu9foyfyefyew
+  name: agent-app
+credentials:
+  usernames:
+    erin:
+      email: null
+      failed_login_attempts: 0
+      first_name: Thao
+      last_name: Phuong
+      logged_in: false
+      password: pbkdf2:sha256:1000000$gLSK4UEhmlM9yxad$cd5c8c0844528d3aa57f253f92a8f630af28c4f8bdac66bae195aa002920f9d4
+      roles:
+      - TA
+    hoang.thang:
+      email: null
+      failed_login_attempts: 0
+      first_name: Hoang
+      last_name: Thang
+      logged_in: false
+      password: pbkdf2:sha256:1000000$i1I4p2gnzrbe34CG$60dce08dcbec5c3f8aa378ed1c972e8d8a5e6e437baa6ee2a7ad1e66aeaad404
+      roles:
+      - TA
+    kate:
+      email: null
+      failed_login_attempts: 0
+      first_name: Kate
+      last_name: TA
+      logged_in: false
+      password: pbkdf2:sha256:1000000$sGb0HWGZcrpDHGnb$a9cbde90425e9197e2d94a87a31dc177ac61d19e57eb3b8867d83eecfe984695
+      roles:
+      - TA
+    ngoc.admin:
+      email: nicolequachworkspace@gmail.com
+      failed_login_attempts: 0
+      first_name: Nico
+      last_name: Quach
+      logged_in: false
+      password: pbkdf2:sha256:1000000$lNxoNNsdqjPuK6Wc$789f242df20eb80cf32594669569641eb246fa073ef424db7daf65f27533f182
+      roles:
+      - ADMIN
+    ngoc.candidate:
+      email: nicolequachworkspace@gmail.com
+      failed_login_attempts: 0
+      first_name: Nico
+      last_name: Quach
+      logged_in: false
+      password: pbkdf2:sha256:1000000$ScpkbBfKdnFcVSnO$78253d7ea4d2609c987eeae64e5abdd5c28c1922a8a140aa5ee9af37370cf3db
+      roles:
+      - CANDIDATE
+    ngoc.ta:
+      email: nicolequachworkspace@gmail.com
+      failed_login_attempts: 0
+      first_name: Nico
+      last_name: Quach
+      logged_in: false
+      password: pbkdf2:sha256:1000000$yy8zeyqjitaJAn24$6dfe604f481eef16c02577ecde2e0c45586dbbb41e48d7eebccf74a1f521245a
+      roles:
+      - TA
+    rosie.nguyen:
+      email: null
+      failed_login_attempts: 0
+      first_name: Rosie
+      last_name: Nguyen
+      logged_in: false
+      password: pbkdf2:sha256:1000000$tJ9nn6xowIQNXU46$4cbf5fb8d6064bef0fc41f8dc5cb880b1afa380b95c4633c03705f203a85b2f2
+      roles:
+      - TA

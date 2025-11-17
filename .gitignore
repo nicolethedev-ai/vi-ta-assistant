@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+giờ tôi cần chỉnh sửa logic của phần upload, tức là khi bấm nút upload thì nó sẽ hiển thị tạm ở trên khung input, user có thể upload thêm file hoặc bấm nút send để gửi tin nhắn. Lúc đó sẽ lưu lần lượt lưu các CV và JD, tức là Ai sẽ phân biệt nội dung nào là CV, nội dung nào là JD để lưu vào chính xác bảng trong database ( tôi nghĩ nên tạo function_tools để AI biết nên lưu vào đâu)
