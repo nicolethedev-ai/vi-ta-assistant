@@ -14,7 +14,7 @@ from flask_login import login_required, current_user
 import utils.agent_logic as agent_logic
 import utils.database as db
 
-from . import cache
+from extensions import cache
 
 chat = Blueprint("chat", __name__)
 

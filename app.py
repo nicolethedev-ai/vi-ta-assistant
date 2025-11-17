@@ -8,6 +8,7 @@ from flask_caching import Cache
 from yaml.loader import SafeLoader
 
 from models import User  # Chúng ta sẽ tạo file này
+from extensions import cache, login_manager
 
 # Tải biến môi trường (quan trọng, phải tải trước khi kết nối CSDL)
 from dotenv import load_dotenv
@@ -18,30 +19,27 @@ load_dotenv(override=True)
 with open("config.yaml") as file:
     app_config = yaml.load(file, Loader=SafeLoader)
 
-cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
-login_manager = LoginManager()
-login_manager.login_view = 'auth.login'  # Chuyển hướng đến route login nếu chưa đăng nhập
 
 def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = "MỘT_SECRET_KEY_RẤT_MẠNH_VÀ_BÍ_MẬT"
     
+    # Thêm config cache vào app.config
+    app.config["CACHE_TYPE"] = "SimpleCache"
+    
     # Khởi tạo extensions
     login_manager.init_app(app)
-    cache.init_app(app)
+    cache.init_app(app) # Dòng này vẫn giữ nguyên
 
-    # Hàm này của Flask-Login cần để biết cách tải user từ session
     @login_manager.user_loader
     def load_user(user_id):
-        # Chúng ta cần một cách để lấy user bằng ID
-        # User.get(user_id) là một hàm giả định
         return User.get(user_id)
 
-    # Đăng ký Blueprints (các file route)
-    from .auth import auth as auth_blueprint
+    # Đăng ký Blueprints
+    from auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    from .chat import chat as chat_blueprint
+    from chat import chat as chat_blueprint # Dòng 44 của bạn
     app.register_blueprint(chat_blueprint)
 
     return app
